@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Test html</title>
+        <style>
+            h1{                
+                font-size: 30;
+                font-style: italic;
+                color: maroon;
+                margin: 50% ;
+            }
+            body{
+                width: auto;
+                height: 100;
+                background: radial-gradient(40% 50% , #FAECD5, #CAE4D8);
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1>Articles</h1>
+        <ul>
+            <% @articles.each do |article| %>
+                <li>
+                    <%= link_to article.title, article %>
+                </li>
+            <% end %>
+        </ul>    
+
+    <%= link_to "New Article", new_article_path %>
+
+    </body>
+</html>
