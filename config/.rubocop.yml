@@ -1,0 +1,28 @@
+group :development, :test do
+  gem 'rubocop'
+  gem 'rubocop-performance'
+  gem 'rubocop-rails'
+  gem 'rubocop-rspec' # or gem 'rubocop-minitest'
+end
+
+
+Exclude:
+  - 'db/**/*'
+  - 'script/**/*'
+  - 'bin/**/*'
+  - 'bin/**/*'
+
+Metrics/LineLength:
+  Max: 100
+
+Metrics/BlockLength:
+  Exclude:
+    - config/**/*
+    - spec/**/*
+
+Lint/AmbiguousBlockAssociation:
+  Exclude:
+    - spec/**/*
+
+Style/Documentation:
+  Enabled: false
