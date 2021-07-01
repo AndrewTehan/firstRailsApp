@@ -1,5 +1,7 @@
 <%= form_with model: article do |form| %>
     <div>
+    <h1>fds
+    </h1>
       <%= form.label :title %><br>
       <%= form.text_field :title %>
       <% article.errors.full_messages_for(:title).each do |message| %>
